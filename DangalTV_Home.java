@@ -74,21 +74,18 @@ public class DangalTV_Home extends BastTest{
 	
   List< WebElement> uIeleString=	driver.findElements(By.className("android.widget.TextView"));
   List<String> stringList = new ArrayList<>();
-  List<Integer> tringList = new ArrayList<>();
 
 
 	for (WebElement webElement1 : uIeleString) {
 		String elementText = webElement1.getText();
 		
-		int lengttxt=elementText.length();
-		tringList.add(lengttxt);
 		
 		stringList.add(elementText);
 	}
 
-	Thread.sleep(1000);
+	Thread.sleep(1700);
 	
-	if (tringList.contains(0)) {
+	if (stringList.contains("")) {
 		System.out.println("UI appeared- "+hdmiString +" connected");
 		
 	}	else {

@@ -27,14 +27,19 @@ public class DangalTV_WifitoggleswitchTest extends BastTest{
     	 wifitogElement.click();
      }
      
-	 Thread.sleep(4000);
+	 Thread.sleep(5000);
 
       String wificonnectstatuString=  driver.findElements(By.id("android:id/summary")).get(0).getText();
       System.out.println( "Wifi reconnecting status shows: "+ wificonnectstatuString);
      
       Assert.assertTrue(wificonnectstatuString.trim().equalsIgnoreCase("Connected"), "Status Connecetd");
 		
-		
+	
+      DangalTV_WifiTest wifieTest=new DangalTV_WifiTest(driver);
+      wifieTest.wifitest();
+      
+      
+      
 	}
 
 }

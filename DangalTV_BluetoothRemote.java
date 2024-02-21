@@ -3,6 +3,7 @@ package DangalTVsTestCases;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
@@ -10,7 +11,8 @@ import GoogleTVtestScrips.GenericMethod;
 
 public class DangalTV_BluetoothRemote  extends BastTest{
 	
-	
+
+
 	@Test
 	public void bleremoteTest() throws InterruptedException {
 		System.out.println("Android UI");
@@ -52,6 +54,9 @@ public class DangalTV_BluetoothRemote  extends BastTest{
 		}
 
 		
+	    
+	    DangalTV_BluetoothTest ble=new DangalTV_BluetoothTest(driver);
+	    ble.bttest();
 		
 	}
 	
